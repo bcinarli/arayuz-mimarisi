@@ -3,5 +3,10 @@
 * genelden özele sıralama
 * dosya yükleme sıralaması
 - Preprocessor kullanımı
-- medya objesi
+- Medya objesi
 - ID vs Class
+- Çok dilli çalışma
+- Atomik stillendirme
+- Responsive yaklaşımı
+- Seçici spesifikliği
+- Tarayıcı bağımsız kodlama
