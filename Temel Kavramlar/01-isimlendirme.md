@@ -8,6 +8,36 @@ Diğer bütün yazılım geliştirme sistemleri gibi, arayüz geliştirme için 
 
 Web tabanlı sistemleri yaşayan, sürekli büyüyen bir organizma gibi düşündüğümüzde, görünümlerinin, tasarımlarının sürekli değişmesi, yenilenmesi, revize edilmesi işten bile değildir. Örneğin, ilk başlarda yeşil renk olarak tasarlanmış ve uygulanmış bir aksiyon butonunun rengi daha sonrasında mavi olarak değiştirildiğini varsayalım. Kod kurgusu ilk tasarıma göre `.green-button` şeklinde yapılmış ve bütün sistemdeki ana aksiyon butonlarına `green-button` classı eklenmiş olsun. Tasarım revizesinden sonra bu class tanımlanmış bütün öğeler mavi gözükmeye başlıyor. İsminde _yeşil_ geçen bir class tanımını _mavi_ renk vermek için kullanmaya başlamış oluyoruz. Bir süre sonra bütün buton stillerinin değiştiğini düşündüğünüzde vardığınız nokta; yeşil aslında mavi, kırmızı aslında gri, pembe aslında kırmızı, mavi aslında sarı renk veren bir anlam karmaşası olacaktır. 
 
+İlk tasarım geldiğinde yapılan tanımlar
+``` css
+.green-button {
+	background-color: green;
+}
+
+.blue-button {
+	background-color: blue;
+}
+
+.red-button {
+	background-color: red;
+}
+```
+
+Tasarımlarda renk revizesi olduktan sonraki tanımlar
+``` css
+.green-button {
+	background-color: blue;
+}
+
+.blue-button {
+	background-color: yellow;
+}
+
+.red-button {
+	background-color: gray;
+}
+```
+
 İsimlerin tasarımdan bağımsız olması, size yeni tasarım revizelerinde daha rahat hareket etmenizi ve kodlarınızın karışmadan daha rahat kontrol edilebilmesine imkan sağlayacaktır. Bunun için yapılabilecek en iyi kurgulardan biri, isimlendirmelerinizi öğelerin __nasıl göründüğü__ yerine __nasıl çalıştığına__ göre yapmaktır. Yine buton tanımlarından yola çıkacak olursak; formları işlemi sonlandıran (submit) buton tasarım ne olursa olsun hep işlemi sonlandırma görevini yerine getirecektir. Dolayısıyla, bu tarz buton için `green-button` yerine `primary-button` ya da daha geniş Kullanım amacı verebilecek `primary-action` gibi isim verilebilir. Tanım setini genişleterek, `secondary-action`, `cancel-action`, `return-action` gibi geniş bir buton tanım setine sahip olunabilir. Ayrıca bu şekilde hazırlanmış bir set, herhangibir anlam kayması olmadan, `button`, `a`, `input[type=submit]` gibi buton işlevi görebilecek farklı elemanlarda da kolayca kullanılabilir. 
 
 ## 1.2 İsimler Herkes Tarafından Anlaşılabilir Olmalı
@@ -32,3 +62,8 @@ Yani aslında ilk başta hiç bir anlam ifade etmeyen, ama elemanlar arasına _m
 Başka bir hata da, bir sete anlam ifade etmeyecek şekilde isimler vermektir. `buttonStyle1`, `buttonStyle2`, `buttonStyle3` gibi hem işlevsellik hem de neye benzedikleri açısından hiçbir anlam ifade etmeyen isimlendirmelerdir. Bu grup da, _margin_ tanımları gibi koda ilk defa bakan birisine anlam ifade etmeyecektir. 
 
 Bu tarz sadece kişiye özel anlam ifade edecek isimlerin önüne yine yaptığı işe göre isimlendirme yöntemini uygulayarak geçilebilir. `m10` class ismi yerine, elemanlar arasında tasarımsal boşluğun (gutter) `10px` olarak yapan class ismini `separate-by-gutter` gibi bir isimle daha anlamlı olarak hem de yine tasarımdan bağımsız hale getirerek yapılabilir. Bu sayede, tasarım değiştiğinde, yeni _gutter_ tanımınız `20px` olsa bile, HTML tarafında değişiklik yapma ihtiyacı olmadan CSS üzerinden revize yapma imkanı olacaktır. Ayrıca kodu ilk defa okuyan bir kişi de `separate-by-gutter` tanımını görünce, elemanın diğer elemanlar ile arasına _gutter_ kadar mesafeye sahip olacağını kolayca anlayabilecektir. 
+
+## 1.3 İçgüdüsel ve Tahmin Edilebilir Olmalı
+Özellikle ekip olarak çalışılan projelerde, isimlendirmenin kolay takip edilebilir olması ve akla uygun olması çok önemlidir. Tahmin edilebilir isimler kullanımı kolaylaştırdığı gibi, tanımın var olup olmadığının bilinmemesi yüzünden kod tekrarınını azaltacaktır. Widget olarak kullanılan kısımlar için `.widget` isimli bir _component_ tanımının yapılmış olması, başlık alanları için `.title` isimli seçicilerin oluşturulması ya da anasayfa spot alanı olarak kullanılacak içeriğe `.spot` şeklinde isim verilmesi tamamen çalışma içerisinde tahmin edilebilir bir isimlendirme standardına sahip olunacaktır.
+
+Bu tarz isimlendirmeler genelde içgüdüsel olarak yapılmaktadır ve elemanın ya da _component_in görünümünden çok yaptığı işe ve/veya içeriğine göre şekillenmektedir. Nasıl _menu_ olarak kullanılan bir elemana `list` şeklinde bir class tanımı yapmak anlamsız geliyorsa, içgüdüsel olmayan isimlendirmeler de tanımları kullananlar için anlamsız/ters gelecektir.
