@@ -1,4 +1,4 @@
-# 1 İsimlendirme
+# İsimlendirme
 Diğer bütün yazılım geliştirme sistemleri gibi, arayüz geliştirme için de isimlendirme kritik bir öneme sahiptir. Hem tanımların tekrar kullanılabilirliğini arttırabilme hem de geliştirmeyi kolaylaştırma ihtimalleri göz önüne alındığında üzerinde durulması gereken bir konu olarak öne çıkmaktadır.
 
 İsimlendirme, çoğunlukla zaman alan ve bazen angarya gibi görülen bir iş olmakla beraber, iyi kurgulandığında, üzerinde harcanan her dakika fazlasıyla geri kazanılacaktır. Bu kurguyu yaparken dikkat edilmesi gereken bir kaç nokta ön plana çıkmaktadır. Bunlara göz atacak olursak;
@@ -66,4 +66,4 @@ Bu tarz sadece kişiye özel anlam ifade edecek isimlerin önüne yine yaptığ�
 ## 1.3 İçgüdüsel ve Tahmin Edilebilir Olmalı
 Özellikle ekip olarak çalışılan projelerde, isimlendirmenin kolay takip edilebilir olması ve akla uygun olması çok önemlidir. Tahmin edilebilir isimler kullanımı kolaylaştırdığı gibi, tanımın var olup olmadığının bilinmemesi yüzünden kod tekrarınını azaltacaktır. Widget olarak kullanılan kısımlar için `.widget` isimli bir _component_ tanımının yapılmış olması, başlık alanları için `.title` isimli seçicilerin oluşturulması ya da anasayfa spot alanı olarak kullanılacak içeriğe `.spot` şeklinde isim verilmesi tamamen çalışma içerisinde tahmin edilebilir bir isimlendirme standardına sahip olunacaktır.
 
-Bu tarz isimlendirmeler genelde içgüdüsel olarak yapılmaktadır ve elemanın ya da _component_in görünümünden çok yaptığı işe ve/veya içeriğine göre şekillenmektedir. Nasıl _menu_ olarak kullanılan bir elemana `list` şeklinde bir class tanımı yapmak anlamsız geliyorsa, içgüdüsel olmayan isimlendirmeler de tanımları kullananlar için anlamsız/ters gelecektir.
+Bu tarz isimlendirmeler genelde içgüdüsel olarak yapılmaktadır ve elemanın ya da _component_'e görünümünden çok yaptığı işe ve/veya içeriğine göre şekillenmektedir. Nasıl _menu_ olarak kullanılan bir elemana `list` şeklinde bir class tanımı yapmak anlamsız geliyorsa, içgüdüsel olmayan isimlendirmeler de tanımları kullananlar için anlamsız/ters gelecektir.
