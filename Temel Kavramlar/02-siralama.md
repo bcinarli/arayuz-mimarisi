@@ -15,7 +15,7 @@ CSS içerisinde yapılan tanımların tarayıcılar tarafından işlenmesi yukar
 }
 ```
 
-```
+``` html
 <div id="header" class="header">
 	Başlık
 </div>
