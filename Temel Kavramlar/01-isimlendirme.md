@@ -1,7 +1,7 @@
 # İsimlendirme
 Diğer bütün yazılım geliştirme sistemleri gibi, arayüz geliştirme için de isimlendirme kritik bir öneme sahiptir. Hem tanımların tekrar kullanılabilirliğini arttırabilme hem de geliştirmeyi kolaylaştırma ihtimalleri göz önüne alındığında üzerinde durulması gereken bir konu olarak öne çıkmaktadır.
 
-> There are only two hard things in Computer Science: cache invalidation and naming things.[^1]
+> There are only two hard things in Computer Science: cache invalidation and naming things. <sup>1</sup>
 >
 > -- Phil Karlton
 
@@ -44,7 +44,7 @@ Tasarımlarda renk revizesi olduktan sonraki tanımlar
 
 İsimlerin tasarımdan bağımsız olması, size yeni tasarım revizelerinde daha rahat hareket etmenizi ve kodlarınızın karışmadan daha rahat kontrol edilebilmesine imkan sağlayacaktır. Bunun için yapılabilecek en iyi kurgulardan biri, isimlendirmelerinizi öğelerin __nasıl göründüğü__ yerine __nasıl çalıştığına__ göre yapmaktır. Yine buton tanımlarından yola çıkacak olursak; formları işlemi sonlandıran (submit) buton tasarım ne olursa olsun hep işlemi sonlandırma görevini yerine getirecektir. Dolayısıyla, bu tarz buton için `green-button` yerine `primary-button` ya da daha geniş Kullanım amacı verebilecek `primary-action` gibi isim verilebilir. Tanım setini genişleterek, `secondary-action`, `cancel-action`, `return-action` gibi geniş bir buton tanım setine sahip olunabilir. Ayrıca bu şekilde hazırlanmış bir set, herhangibir anlam kayması olmadan, `button`, `a`, `input[type=submit]` gibi buton işlevi görebilecek farklı elemanlarda da kolayca kullanılabilir. 
 
-> When people tell you something's wrong or doesn't work for them, they are almost always right. [^2]
+> When people tell you something's wrong or doesn't work for them, they are almost always right. <sup>2</sup>
 >
 > -- Neil Gaiman
 
@@ -71,7 +71,7 @@ Başka bir hata da, bir sete anlam ifade etmeyecek şekilde isimler vermektir. `
 
 Bu tarz sadece kişiye özel anlam ifade edecek isimlerin önüne yine yaptığı işe göre isimlendirme yöntemini uygulayarak geçilebilir. `m10` class ismi yerine, elemanlar arasında tasarımsal boşluğun (gutter) `10px` olarak yapan class ismini `separate-by-gutter` gibi bir isimle daha anlamlı olarak hem de yine tasarımdan bağımsız hale getirerek yapılabilir. Bu sayede, tasarım değiştiğinde, yeni _gutter_ tanımınız `20px` olsa bile, HTML tarafında değişiklik yapma ihtiyacı olmadan CSS üzerinden revize yapma imkanı olacaktır. Ayrıca kodu ilk defa okuyan bir kişi de `separate-by-gutter` tanımını görünce, elemanın diğer elemanlar ile arasına _gutter_ kadar mesafeye sahip olacağını kolayca anlayabilecektir. 
 
-> When you think of a concrete object, you think wordlessly, and then, if you want to describe the thing you have been visualising you probably hunt about until you find the exact words that seem to fit it. [^3]
+> When you think of a concrete object, you think wordlessly, and then, if you want to describe the thing you have been visualising you probably hunt about until you find the exact words that seem to fit it. <sup>3</sup>
 >
 > -- George Orwel
 
@@ -82,6 +82,6 @@ Bu tarz isimlendirmeler genelde içgüdüsel olarak yapılmaktadır ve elemanın
 
 Kolay bulunabilen, gündelik kodlama dili içerisinde sık kullanılan ve metaforlardan uzak olan isimleri tercih etmek tanımları yapmayı kolaylaştıracak ve aylar sonra yeni bir ekleme yapma ihtiyacı hissetiğinizde "buna neden böyle demişiz" sorularından sizi kurtaracaktır. Ekip olarak çalışılan, büyük projelerde ise, hem kod bakımını hem de geliştirmeyi hızlandıracak bir temel atılmış olacaktır.
 
-[^1]: Programcılıkta iki zor şey vardır: Ön belleği silme ve tanımları isimlendirme.
-[^2]: Birileri ne zaman bir şeyin yanlış olduğunu veya kendileri için anlamlı olmadığını söylüyorsa, hemem hemen her zaman haklıdırlar.
-[^3]: Bir nesneyi düşündüğünüzde, ilk başta kelimeler olmadan düşünürsünüz. Ne zaman bu düşündüğünüz nesneyi anlatmak isterseniz, bu nesneye birebir anlatan kelimeleri bulana kadar _ava çıkarsınız._ 
+1. <span name="fn-1" id="fn-1">Programcılıkta iki zor şey vardır: Ön belleği silme ve tanımları isimlendirme.</span>
+2. Birileri ne zaman bir şeyin yanlış olduğunu veya kendileri için anlamlı olmadığını söylüyorsa, hemem hemen her zaman haklıdırlar.
+3. Bir nesneyi düşündüğünüzde, ilk başta kelimeler olmadan düşünürsünüz. Ne zaman bu düşündüğünüz nesneyi anlatmak isterseniz, bu nesneye birebir anlatan kelimeleri bulana kadar _ava çıkarsınız._ 
