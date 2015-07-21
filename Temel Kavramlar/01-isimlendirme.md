@@ -82,6 +82,8 @@ Bu tarz isimlendirmeler genelde içgüdüsel olarak yapılmaktadır ve elemanın
 
 Kolay bulunabilen, gündelik kodlama dili içerisinde sık kullanılan ve metaforlardan uzak olan isimleri tercih etmek tanımları yapmayı kolaylaştıracak ve aylar sonra yeni bir ekleme yapma ihtiyacı hissetiğinizde "buna neden böyle demişiz" sorularından sizi kurtaracaktır. Ekip olarak çalışılan, büyük projelerde ise, hem kod bakımını hem de geliştirmeyi hızlandıracak bir temel atılmış olacaktır.
 
+---
+
 1. <span name="fn-1" id="fn-1">Programcılıkta iki zor şey vardır: Ön belleği silme ve tanımları isimlendirme.</span>
 2. Birileri ne zaman bir şeyin yanlış olduğunu veya kendileri için anlamlı olmadığını söylüyorsa, hemem hemen her zaman haklıdırlar.
 3. Bir nesneyi düşündüğünüzde, ilk başta kelimeler olmadan düşünürsünüz. Ne zaman bu düşündüğünüz nesneyi anlatmak isterseniz, bu nesneye birebir anlatan kelimeleri bulana kadar _ava çıkarsınız._ 
