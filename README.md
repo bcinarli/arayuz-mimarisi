@@ -12,6 +12,10 @@ __İÇİNDEKİLER__
   - Class Seçiciler
   - Seçici Kullanım Yaklaşımları
   - Seçici Spesifikliği
+* Gelişmiş Metodlar
+  - OOCSS
+  - BEM
+  - SMACSS
 * Responsive
   - Desktop First
   - Mobile First
