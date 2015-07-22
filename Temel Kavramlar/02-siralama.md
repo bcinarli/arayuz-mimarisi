@@ -33,7 +33,7 @@ Buradaki örnekte, "Başlık" metinin rengi _kırmızı_ değil _mavi_ olacaktı
 
 `!important` kullanımı ilk başlarda avantaj sağlıyor gibi gözükse de, ilerleyen zamanlarda daha çok `!important` kullanımına sebep olmaktadır. Bu durum da sistemler üzerinde gereksiz kod yüküne ve kod bakımının giderek zorlaşmasına yol açacaktır.
 
-CSS tanımlarında heç seçici sadeliğini sağlamak hem de kontrolü daha kolaylaştırmak için uygulama/proje içerisinde tanım setlerini belirli bir sıra ile hazırlamak gerekmektedir. Bu sıra temel olarak, genelden özele, küçük parçalardan büyük *component*lere ve değişebilen durumlardan final durum/görünüm şeklinde düşünülebilir. Bir liste halinde bunu düşünecek olacak olursak,
+CSS tanımlarında hem seçici sadeliğini sağlamak hem de kontrolü daha kolaylaştırmak için uygulama/proje içerisinde tanım setlerini belirli bir sıra ile hazırlamak gerekmektedir. Bu sıra temel olarak, genelden özele, küçük parçalardan büyük *component*lere ve değişebilen durumlardan final durum/görünüm şeklinde düşünülebilir. Bir liste halinde bunu düşünecek olacak olursak,
 
 1. Ayarlar (*Settings*)
 2. Araçlar (*Tools*)
