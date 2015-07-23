@@ -44,4 +44,12 @@ CSS tanımlarında hem seçici sadeliğini sağlamak hem de kontrolü daha kolay
 7. Bileşenler (*Components*)
 8. Yardımcı/Final Durumlar (*Auxiliary*)
 
-Bu liste içerisindeki ilk iki madde özellikle Sass, Less gibi CSS önişlemci (*preprocessor*) kullanılan projeler için geçerliyken, diğer maddeler bütün arayüz geliştirme ihtiyacı olan sistemlere uygulanabilir.
+Bu liste içerisindeki ilk iki madde özellikle Sass, Less gibi CSS önişlemci (*preprocessor*) kullanılan projeler için geçerliyken, diğer maddeler bütün arayüz geliştirme ihtiyacı olan sistemlere uygulanabilir. Listeyi detaylıca inceleyecek olursak;
+
+## 1. Ayarlar
+Sass veya Less kullanılan sistemlerde CSS kodlarının tamamında kullanılacak değişkenleri en önce yüklemek gerekecektir. Bu değişkenlerin kapsamı, tasarımın renklerinden, responsive kodlama için *breakpoint* tanımlarına kadar her türlü parametrik kullanımı kapsayabilir.
+
+## 2. Araçlar
+Yine Sass ve Less kullanırken faydalı olabilecek, tekrar eden tanımları kolay yapmak için kullanabileceğimiz *mixin* ve *fonksiyon*ları, ayarlardan çağırarak, parametlerin bu *mixin* ve *fonksiyon*lar ile uyumlu çalışması sağlanacaktır.
+
+
