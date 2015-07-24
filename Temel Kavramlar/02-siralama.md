@@ -52,4 +52,14 @@ Sass veya Less kullanılan sistemlerde CSS kodlarının tamamında kullanılacak
 ## 2. Araçlar
 Yine Sass ve Less kullanırken faydalı olabilecek, tekrar eden tanımları kolay yapmak için kullanabileceğimiz *mixin* ve *fonksiyon*ları, ayarlardan çağırarak, parametlerin bu *mixin* ve *fonksiyon*lar ile uyumlu çalışması sağlanacaktır.
 
+## 3. Genel Tanımlar/Reset
 
+## 4. Elemanlar
+
+## 5. Sayfa Dizilimi
+
+## 6. Küçük Parçalar
+
+## 7. Bileşenler
+
+## 8. Yardımcı/Final Durumlar
