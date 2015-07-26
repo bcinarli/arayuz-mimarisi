@@ -53,6 +53,7 @@ Sass veya Less kullanılan sistemlerde CSS kodlarının tamamında kullanılacak
 Yine Sass ve Less kullanırken faydalı olabilecek, tekrar eden tanımları kolay yapmak için kullanabileceğimiz *mixin* ve *fonksiyon*ları, ayarlardan çağırarak, parametlerin bu *mixin* ve *fonksiyon*lar ile uyumlu çalışması sağlanacaktır.
 
 ## 3. Genel Tanımlar/Reset
+Genel tanımlar kısmına daha çok HTML elemanların tüm tarayıcılarda ortak gözükmesi ya da ortak davranması istenen durumlar ile alakalı kodlar bulunabilir. Yine `float` edilmiş elemanların *wrapper*larının düzgün gözükmesi için bolca kullanılan `clearfix` metodları, `html`, `body` etiketleri gibi tasarım ve uygulamadan çok sayfanın kendisiyle alakalı tanımlar burada bulunabilirler. Ayrıca yine bu aşamada sisteme yüklenecek *reset* kodlarının, herşeyi sıfırlayan bir reset tanımı yerine tarayıcılarda elemanların aynı gözükmesini sağlayan *normalize.css* gibi bir reset olması, sıfırlanan herşeyin tekrar tanımlanması ihtiyacını da ortadan kaldıracaktır.
 
 ## 4. Elemanlar
 
