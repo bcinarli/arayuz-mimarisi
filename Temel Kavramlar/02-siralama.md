@@ -49,11 +49,79 @@ Bu liste içerisindeki ilk iki madde özellikle Sass, Less gibi CSS önişlemci 
 ## 1. Ayarlar
 Sass veya Less kullanılan sistemlerde CSS kodlarının tamamında kullanılacak değişkenleri en önce yüklemek gerekecektir. Bu değişkenlerin kapsamı, tasarımın renklerinden, responsive kodlama için *breakpoint* tanımlarına kadar her türlü parametrik kullanımı kapsayabilir.
 
+*Örneğin:*
+
+```scss
+$base-spacing: 1em;
+$base-input-spacing: 5px;
+$base-gutter: 20px;
+$base-grid-columns: 12;
+
+$colors: (
+	primary   : #c54846,
+	secondary : #0072bc,
+	text      : #222
+);
+
+$fonts: (
+	size: 16px,
+	"line-height": 1.5,
+	text: '"OpenSans", Helvetica, Arial, sans-serif',
+	title: '"Roboto Slab", Georgia, Times, serif'
+);
+```
+
 ## 2. Araçlar
 Yine Sass ve Less kullanırken faydalı olabilecek, tekrar eden tanımları kolay yapmak için kullanabileceğimiz *mixin* ve *fonksiyon*ları, ayarlardan çağırarak, parametlerin bu *mixin* ve *fonksiyon*lar ile uyumlu çalışması sağlanacaktır.
 
+```scss
+@mixin dims($width, $height: null) {
+    width: $width;
+    @if $height == null {
+        height: $width;
+    }
+    @else {
+        height: $height;
+    }
+}
+```
+
 ## 3. Genel Tanımlar/Reset
 Genel tanımlar kısmına daha çok HTML elemanların tüm tarayıcılarda ortak gözükmesi ya da ortak davranması istenen durumlar ile alakalı kodlar bulunabilir. Yine `float` edilmiş elemanların *wrapper*larının düzgün gözükmesi için bolca kullanılan `clearfix` metodları, `html`, `body` etiketleri gibi tasarım ve uygulamadan çok sayfanın kendisiyle alakalı tanımlar burada bulunabilirler. Ayrıca yine bu aşamada sisteme yüklenecek *reset* kodlarının, herşeyi sıfırlayan bir reset tanımı yerine tarayıcılarda elemanların aynı gözükmesini sağlayan *normalize.css* gibi bir reset olması, sıfırlanan herşeyin tekrar tanımlanması ihtiyacını da ortadan kaldıracaktır.
+
+*Örneğin:*
+
+``` scss
+/**
+ * Grid ve benzeri kullanımlarda daha rahat genişlik hesaplamak için
+ * bütün elemanların `box-sizing` tanımını `border-box` olarak ayarlayalım
+ */
+html {
+    box-sizing: border-box;
+}
+
+* {
+    &,
+    &:after,
+    &:before {
+        box-sizing: inherit;
+    }
+}
+
+/**
+ * Clearfix
+ * Daha anlamlı ve amacına uygun isimlendirmek için `group`
+ * olarak tanımladık. Zaten burada yapılan iş de, elemanları
+ * yan yan bir "grup" için de düzgün olarak göstermek :)
+ */
+.group {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+```
 
 ## 4. Elemanlar
 Genel tanımlardan sonra yapılacak tanımlar yine daha genel geçer olan ve geliştirme sırasında işleri kolaylaştıracak şekilde HTML.etiketlerine doğrudan yapılacak tanımlar gelmektedir. Burada elemanlar olarak bahsedilen grup doğrudan *tag*lerin kendisidir. Başlık etiketleri `h1` - `h6` dan, liste etiketleri `ul`, `ol`, `li`, `dl` gibi özellikle içeriklerin sınıflandırılması, pozisyonlandırılması için kolaylık sağlayan tanımlar yapılabilir. Dikkat edilmesi gereken noktalardan biri bu kısımlarda, __font__, __renk__ gibi görünüme dayalı tanımlardan çok, __margin__, __padding__ gibi pozisyon, *alignment* gibi tanımlar önceliklendirilmelidir. Daha görselliğe dayalı tanımlar için *component* içleri doğru tercih olacaktır. Bu grupta hala genel tanımlar yapıldığı için, *overwrite* yapma ihtimali olan tanımlardan kaçınıp, ortak özellikleri ön plana çıkartmak faydalı olacaktır. 
