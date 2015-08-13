@@ -133,3 +133,17 @@ Genel tanımlardan sonra yapılacak tanımlar yine daha genel geçer olan ve gel
 ## 7. Bileşenler
 
 ## 8. Yardımcı/Final Durumlar
+Kodlar içerisine en son eklenmesi beklenen tanımlar daha çok bir elemanın ya da *component*in ilgili seçici eklendiğinde gözükeceği son durumları belirler. Bir elemanın gizlenmesi, belirli bir pozisyonda kalması gibi durumları bu kategoride sayabiliriz.
+
+*Örneğin*
+``` scss
+.is-hidden {
+	display: none;
+}
+
+.mobile-hidden {
+	@media screen and (max-width: 414px){
+		display: none;
+	}
+}
+```
