@@ -127,6 +127,30 @@ html {
 Genel tanımlardan sonra yapılacak tanımlar yine daha genel geçer olan ve geliştirme sırasında işleri kolaylaştıracak şekilde HTML.etiketlerine doğrudan yapılacak tanımlar gelmektedir. Burada elemanlar olarak bahsedilen grup doğrudan *tag*lerin kendisidir. Başlık etiketleri `h1` - `h6` dan, liste etiketleri `ul`, `ol`, `li`, `dl` gibi özellikle içeriklerin sınıflandırılması, pozisyonlandırılması için kolaylık sağlayan tanımlar yapılabilir. Dikkat edilmesi gereken noktalardan biri bu kısımlarda, __font__, __renk__ gibi görünüme dayalı tanımlardan çok, __margin__, __padding__ gibi pozisyon, *alignment* gibi tanımlar önceliklendirilmelidir. Daha görselliğe dayalı tanımlar için *component* içleri doğru tercih olacaktır. Bu grupta hala genel tanımlar yapıldığı için, *overwrite* yapma ihtimali olan tanımlardan kaçınıp, ortak özellikleri ön plana çıkartmak faydalı olacaktır. 
 
 ## 5. Sayfa Dizilimi
+Sayfa dizilimi kısmında, içindeki elemanlardan bağımsız olarak, sayfanın genel iskeletini oluşturan elemanlara ait tanımlar gelmektedir. Bir çok arayüz geliştirme yaklaşımında klasik olarak bulunan *wrapper* tanımından, *header*, *footer*, *content* gibi içerik kısımlarının yerleştirileceği alanların tanımlarını burada düşünebilir. Bu alanların kendi içinde sıralanmasını da dıştan içe ve yukarıdan aşağıya gibi kurgulamak sayfa akışını kontrol etmeyi kolaylaştıracaktır.
+
+*Örneğin*
+``` scss
+.page-wrap {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+
+.page-header {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+}
+
+.page-content {
+	position: relative;
+	top: 50px;
+	max-width: 960px;
+	margin: 0 auto;
+}
+```
+
 
 ## 6. Küçük Parçalar
 
