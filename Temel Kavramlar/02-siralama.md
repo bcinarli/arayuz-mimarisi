@@ -153,6 +153,38 @@ Sayfa dizilimi kısmında, içindeki elemanlardan bağımsız olarak, sayfanın 
 
 
 ## 6. Küçük Parçalar
+Birçok yerde bahsedilen atomik stillendirmenin karşılığı şeklinde düşünebilinecek küçük parçalar, daha çok kendi başlarına çok kullanılmayan, ama farklı farklı yerlerde diğer elemanlar ile beraber tekrar tekrar kullanılan ögeleri kapsamaktadır. Bir alışveriş sitesinde, ürün tanıtım, kategori ve satın alma adımlarında olan *price-tag* şeklinde isimlendirilebilecek fiyat bilgisi alanı, bildirim sayısını gösteren genelde yuvarlak olarak tasarlanan *notification* alanı ilk akla gelen örneklerdendir. Küçük parçalar kendilerine özgün bir görünüme sahip oldukları gibi bulundukları kısımlara göre görünüm/pozisyon olarak farklılıklara sahip olabilirler.
+
+*Örnekler*
+``` scss
+.notification {
+	display: inline-block;
+	min-width: 16px;
+	height: 16px;
+	padding: 4px;
+	border-radius: 8px;
+	background-color: #f00;
+	color: #fff;
+	text-align: center;
+}
+
+/* kullanıcılacağı yerde özelleşme */
+// ana menü ya da header içerisinde bildirim sayısı 
+.main-nav {
+	.notification {
+		position: absolute;
+		top: -5px;
+		right: -5px;
+	}
+}
+
+// blog kategori widget içinde, ilgili kategorideki yazı sayısı
+.category-list {
+	.notification {
+		float: right;
+	}
+}
+```
 
 ## 7. Bileşenler
 
